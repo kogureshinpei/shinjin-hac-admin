@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="ja" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>【サークル名】</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-white text-gray-800">
+
+    <!-- ========== HEADER ========== -->
+    <header class="fixed top-0 left-0 w-full z-50 bg-white/90 backdrop-blur-sm shadow-sm">
+      <nav class="max-w-6xl mx-auto flex items-center justify-between px-8 py-4">
+        <div class="font-bold text-xl tracking-wide">【サークル名】</div>
+        <ul class="flex gap-8 text-sm font-medium text-gray-600">
+          <li><a href="#about"   class="hover:text-gray-900 transition-colors">活動紹介</a></li>
+          <li><a href="#profile" class="hover:text-gray-900 transition-colors">自己紹介</a></li>
+          <li><a href="#members" class="hover:text-gray-900 transition-colors">メンバー</a></li>
+          <li><a href="#contact" class="hover:text-gray-900 transition-colors">連絡先</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <!-- ========== HERO ========== -->
+    <section
+      class="h-screen bg-cover bg-center bg-no-repeat flex items-center justify-center relative"
+      style="background-image: url('https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1920&q=80');"
+    >
+      <div class="absolute inset-0 bg-black/45"></div>
+      <div class="relative z-10 text-center text-white px-6">
+        <h1 class="text-5xl md:text-7xl font-bold mb-6 tracking-tight drop-shadow-lg">【サークル名】</h1>
+        <p class="text-lg md:text-2xl text-white/80 drop-shadow">【キャッチコピーを入力してください】</p>
+      </div>
+    </section>
+
+    <!-- ========== ABOUT ========== -->
+    <section id="about" class="scroll-mt-20 py-24 bg-gray-50">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-3xl font-bold text-center mb-4">活動紹介</h2>
+        <p class="text-center text-gray-500 mb-14">
+          【サークルの活動内容や理念を紹介する文を入力してください】
+        </p>
+        <div class="flex flex-col md:flex-row gap-8">
+
+          <div class="flex-1 bg-white rounded-2xl shadow p-8 text-center">
+            <div class="text-4xl mb-4">🎯</div>
+            <h3 class="font-bold text-lg mb-3">【活動テーマ1】</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">活動内容の説明を入力してください</p>
+          </div>
+
+          <div class="flex-1 bg-white rounded-2xl shadow p-8 text-center">
+            <div class="text-4xl mb-4">💡</div>
+            <h3 class="font-bold text-lg mb-3">【活動テーマ2】</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">活動内容の説明を入力してください</p>
+          </div>
+
+          <div class="flex-1 bg-white rounded-2xl shadow p-8 text-center">
+            <div class="text-4xl mb-4">🤝</div>
+            <h3 class="font-bold text-lg mb-3">【活動テーマ3】</h3>
+            <p class="text-gray-500 text-sm leading-relaxed">活動内容の説明を入力してください</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== PROFILE ========== -->
+    <section id="profile" class="scroll-mt-20 py-24 bg-white">
+      <div class="max-w-3xl mx-auto px-8">
+        <h2 class="text-3xl font-bold text-center mb-14">自己紹介</h2>
+        <div class="flex flex-col md:flex-row items-center gap-10 bg-white rounded-3xl shadow-md border border-gray-100 p-10">
+          <img
+            src="https://placehold.co/200x200/e2e8f0/94a3b8?text=Photo"
+            alt="プロフィール写真"
+            class="w-48 h-48 rounded-2xl object-cover shadow-md flex-shrink-0"
+          />
+          <div>
+            <p class="text-sm text-gray-400 mb-1">【役職・ポジション】</p>
+            <h3 class="text-2xl font-bold mb-4">【名前】</h3>
+            <p class="text-gray-600 leading-relaxed">
+              【自己紹介文を入力してください。趣味・専門・意気込みなどを書いてみましょう。】
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== MEMBERS ========== -->
+    <section id="members" class="scroll-mt-20 py-24 bg-gray-50">
+      <div class="max-w-5xl mx-auto px-8">
+        <h2 class="text-3xl font-bold text-center mb-14">メンバー</h2>
+        <div class="flex flex-col md:flex-row gap-8">
+
+          <!-- Member Card 1 -->
+          <div class="flex-1 bg-white rounded-2xl shadow-md p-8 text-center">
+            <img
+              src="https://placehold.co/120x120/e2e8f0/94a3b8?text=Photo"
+              alt="メンバー1の写真"
+              class="w-24 h-24 rounded-full mx-auto mb-5 object-cover shadow"
+            />
+            <h3 class="font-bold text-lg mb-1">【名前1】</h3>
+            <p class="text-gray-400 text-sm mb-4">【役職】</p>
+            <p class="text-gray-600 text-sm leading-relaxed">【一言コメントを入力してください】</p>
+          </div>
+
+          <!-- Member Card 2 -->
+          <div class="flex-1 bg-white rounded-2xl shadow-md p-8 text-center">
+            <img
+              src="https://placehold.co/120x120/e2e8f0/94a3b8?text=Photo"
+              alt="メンバー2の写真"
+              class="w-24 h-24 rounded-full mx-auto mb-5 object-cover shadow"
+            />
+            <h3 class="font-bold text-lg mb-1">【名前2】</h3>
+            <p class="text-gray-400 text-sm mb-4">【役職】</p>
+            <p class="text-gray-600 text-sm leading-relaxed">【一言コメントを入力してください】</p>
+          </div>
+
+          <!-- Member Card 3 -->
+          <div class="flex-1 bg-white rounded-2xl shadow-md p-8 text-center">
+            <img
+              src="https://placehold.co/120x120/e2e8f0/94a3b8?text=Photo"
+              alt="メンバー3の写真"
+              class="w-24 h-24 rounded-full mx-auto mb-5 object-cover shadow"
+            />
+            <h3 class="font-bold text-lg mb-1">【名前3】</h3>
+            <p class="text-gray-400 text-sm mb-4">【役職】</p>
+            <p class="text-gray-600 text-sm leading-relaxed">【一言コメントを入力してください】</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== FOOTER / CONTACT ========== -->
+    <footer id="contact" class="scroll-mt-20 bg-gray-900 text-white py-16">
+      <div class="max-w-5xl mx-auto px-8 text-center">
+        <p class="font-bold text-xl mb-8 tracking-wide">【サークル名】</p>
+        <div class="flex justify-center gap-10 mb-10 text-sm">
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">Twitter / X</a>
+          <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
+          <a href="mailto:example@example.com" class="text-gray-400 hover:text-white transition-colors">メール</a>
+        </div>
+        <p class="text-gray-500 text-sm">© 2025 【サークル名】 All rights reserved.</p>
+      </div>
+    </footer>
+
+  </body>
+</html>
