@@ -5,6 +5,79 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>【サークル名】</title>
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+      /* ナビリンク: ホバー時にスライドインするアンダーライン */
+      .nav-link {
+        position: relative;
+      }
+      .nav-link::after {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #111827;
+        border-radius: 1px;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+
+      /* セクション見出し: 中央揃えのアクセントバー */
+      .section-heading {
+        position: relative;
+        display: inline-block;
+      }
+      .section-heading::after {
+        content: '';
+        position: absolute;
+        bottom: -10px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 36px;
+        height: 3px;
+        background-color: #6b7280;
+        border-radius: 2px;
+      }
+
+      /* カード: ホバー時に浮き上がるエフェクト */
+      .card {
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+      }
+      .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+      }
+
+      /* プロフィール写真: ホバーで拡大 */
+      .profile-img {
+        transition: transform 0.3s ease;
+      }
+      .profile-img:hover {
+        transform: scale(1.06);
+      }
+
+      /* フッターリンク: ホバー時に左から光る下線 */
+      .footer-link {
+        position: relative;
+      }
+      .footer-link::before {
+        content: '';
+        position: absolute;
+        bottom: -2px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 1px;
+        background-color: #ffffff;
+        transition: width 0.3s ease;
+      }
+      .footer-link:hover::before {
+        width: 100%;
+      }
+    </style>
   </head>
   <body class="bg-white text-gray-800">
 
@@ -13,10 +86,10 @@
       <nav class="max-w-6xl mx-auto flex items-center justify-between px-8 py-4">
         <div class="font-bold text-xl tracking-wide">【サークル名】</div>
         <ul class="flex gap-8 text-sm font-medium text-gray-600">
-          <li><a href="#about"   class="hover:text-gray-900 transition-colors">活動紹介</a></li>
-          <li><a href="#profile" class="hover:text-gray-900 transition-colors">自己紹介</a></li>
-          <li><a href="#members" class="hover:text-gray-900 transition-colors">メンバー</a></li>
-          <li><a href="#contact" class="hover:text-gray-900 transition-colors">連絡先</a></li>
+          <li><a href="#about"   class="nav-link hover:text-gray-900 transition-colors">活動紹介</a></li>
+          <li><a href="#profile" class="nav-link hover:text-gray-900 transition-colors">自己紹介</a></li>
+          <li><a href="#members" class="nav-link hover:text-gray-900 transition-colors">メンバー</a></li>
+          <li><a href="#contact" class="nav-link hover:text-gray-900 transition-colors">連絡先</a></li>
         </ul>
       </nav>
     </header>
@@ -36,25 +109,25 @@
     <!-- ========== ABOUT ========== -->
     <section id="about" class="scroll-mt-20 py-24 bg-gray-50">
       <div class="max-w-5xl mx-auto px-8">
-        <h2 class="text-3xl font-bold text-center mb-4">活動紹介</h2>
+        <h2 class="section-heading text-3xl font-bold text-center mb-4">活動紹介</h2>
         <p class="text-center text-gray-500 mb-14">
           【サークルの活動内容や理念を紹介する文を入力してください】
         </p>
         <div class="flex flex-col md:flex-row gap-8">
 
-          <div class="flex-1 bg-white rounded-2xl shadow p-8 text-center">
+          <div class="card flex-1 bg-white rounded-2xl shadow p-8 text-center">
             <div class="text-4xl mb-4">🎯</div>
             <h3 class="font-bold text-lg mb-3">【活動テーマ1】</h3>
             <p class="text-gray-500 text-sm leading-relaxed">活動内容の説明を入力してください</p>
           </div>
 
-          <div class="flex-1 bg-white rounded-2xl shadow p-8 text-center">
+          <div class="card flex-1 bg-white rounded-2xl shadow p-8 text-center">
             <div class="text-4xl mb-4">💡</div>
             <h3 class="font-bold text-lg mb-3">【活動テーマ2】</h3>
             <p class="text-gray-500 text-sm leading-relaxed">活動内容の説明を入力してください</p>
           </div>
 
-          <div class="flex-1 bg-white rounded-2xl shadow p-8 text-center">
+          <div class="card flex-1 bg-white rounded-2xl shadow p-8 text-center">
             <div class="text-4xl mb-4">🤝</div>
             <h3 class="font-bold text-lg mb-3">【活動テーマ3】</h3>
             <p class="text-gray-500 text-sm leading-relaxed">活動内容の説明を入力してください</p>
@@ -67,12 +140,12 @@
     <!-- ========== PROFILE ========== -->
     <section id="profile" class="scroll-mt-20 py-24 bg-white">
       <div class="max-w-3xl mx-auto px-8">
-        <h2 class="text-3xl font-bold text-center mb-14">自己紹介</h2>
+        <h2 class="section-heading text-3xl font-bold text-center mb-14">自己紹介</h2>
         <div class="flex flex-col md:flex-row items-center gap-10 bg-white rounded-3xl shadow-md border border-gray-100 p-10">
           <img
             src="https://placehold.co/200x200/e2e8f0/94a3b8?text=Photo"
             alt="プロフィール写真"
-            class="w-48 h-48 rounded-2xl object-cover shadow-md flex-shrink-0"
+            class="profile-img w-48 h-48 rounded-2xl object-cover shadow-md flex-shrink-0"
           />
           <div>
             <p class="text-sm text-gray-400 mb-1">【役職・ポジション】</p>
@@ -88,11 +161,11 @@
     <!-- ========== MEMBERS ========== -->
     <section id="members" class="scroll-mt-20 py-24 bg-gray-50">
       <div class="max-w-5xl mx-auto px-8">
-        <h2 class="text-3xl font-bold text-center mb-14">メンバー</h2>
+        <h2 class="section-heading text-3xl font-bold text-center mb-14">メンバー</h2>
         <div class="flex flex-col md:flex-row gap-8">
 
           <!-- Member Card 1 -->
-          <div class="flex-1 bg-white rounded-2xl shadow-md p-8 text-center">
+          <div class="card flex-1 bg-white rounded-2xl shadow-md p-8 text-center">
             <img
               src="https://placehold.co/120x120/e2e8f0/94a3b8?text=Photo"
               alt="メンバー1の写真"
@@ -104,7 +177,7 @@
           </div>
 
           <!-- Member Card 2 -->
-          <div class="flex-1 bg-white rounded-2xl shadow-md p-8 text-center">
+          <div class="card flex-1 bg-white rounded-2xl shadow-md p-8 text-center">
             <img
               src="https://placehold.co/120x120/e2e8f0/94a3b8?text=Photo"
               alt="メンバー2の写真"
@@ -116,7 +189,7 @@
           </div>
 
           <!-- Member Card 3 -->
-          <div class="flex-1 bg-white rounded-2xl shadow-md p-8 text-center">
+          <div class="card flex-1 bg-white rounded-2xl shadow-md p-8 text-center">
             <img
               src="https://placehold.co/120x120/e2e8f0/94a3b8?text=Photo"
               alt="メンバー3の写真"
@@ -136,9 +209,9 @@
       <div class="max-w-5xl mx-auto px-8 text-center">
         <p class="font-bold text-xl mb-8 tracking-wide">【サークル名】</p>
         <div class="flex justify-center gap-10 mb-10 text-sm">
-          <a href="#" class="text-gray-400 hover:text-white transition-colors">Twitter / X</a>
-          <a href="#" class="text-gray-400 hover:text-white transition-colors">Instagram</a>
-          <a href="mailto:example@example.com" class="text-gray-400 hover:text-white transition-colors">メール</a>
+          <a href="#" class="footer-link text-gray-400 hover:text-white transition-colors">Twitter / X</a>
+          <a href="#" class="footer-link text-gray-400 hover:text-white transition-colors">Instagram</a>
+          <a href="mailto:example@example.com" class="footer-link text-gray-400 hover:text-white transition-colors">メール</a>
         </div>
         <p class="text-gray-500 text-sm">© 2025 【サークル名】 All rights reserved.</p>
       </div>
